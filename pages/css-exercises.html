@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Practice CSS with beginner-friendly exercises on syntax, selectors, colors, layout, and responsive design.">
+  <title>CSS Exercises — Programming Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/exercises.css">
+</head>
+<body data-subject="CSS">
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">&lt;/&gt;</span><span>Programming Simulator</span></a>
+      <a class="back-link" href="../index.html#home">←&nbsp; Back to Home</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="page-intro">
+        <h1>CSS Exercises</h1>
+      <p>Practice CSS one idea at a time. Choose a topic, answer a question, and check what you know.</p>
+    </section>
+    <section class="progress-row" aria-label="CSS exercise progress">
+      <div class="progress-copy"><span class="progress-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="13" width="3.5" height="7" rx="1" fill="currentColor"/><rect x="10.25" y="9" width="3.5" height="11" rx="1" fill="currentColor"/><rect x="15.5" y="5" width="3.5" height="15" rx="1" fill="currentColor"/></svg></span><div><strong>Your progress</strong><span>Completed topics are saved on this device.</span></div></div>
+      <div class="progress-count"><strong id="done-count">0</strong><span>/ 8 done</span></div>
+    </section>
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+    <section aria-labelledby="categories-title">
+      <div class="categories-head"><h2 id="categories-title">Select a Category:</h2><a class="code-lab-jump" href="#code-lab">Want to write code? Try the editor ↓</a></div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+    <section class="code-lab" id="code-lab" data-language="CSS" aria-labelledby="code-lab-title">
+      <div class="code-lab-heading"><div class="kicker">Extra practice</div><h2 id="code-lab-title">Write and run CSS</h2><p>Edit the styles, then run your code to see them applied to the sample page.</p></div>
+      <div class="code-lab-grid">
+        <div class="code-editor-panel"><div class="code-panel-head"><label for="code-input">Your code</label><span class="code-language">CSS</span></div><textarea id="code-input" spellcheck="false" autocapitalize="off" aria-describedby="code-lab-status"></textarea><div class="code-panel-actions"><button class="run-code" id="run-code" type="button">Run code <span aria-hidden="true">→</span></button><button class="reset-code" id="reset-code" type="button">Reset example</button></div></div>
+        <div class="code-output-panel"><div class="code-panel-head"><strong>Live preview</strong><span>OUTPUT</span></div><iframe id="code-preview" title="CSS code preview" sandbox="allow-scripts"></iframe><div id="sql-results" class="sql-results" hidden></div></div>
+      </div>
+      <p class="code-lab-status" id="code-lab-status" role="status" aria-live="polite">Edit the example and run your code.</p>
+    </section>
+  </main>
+  <footer class="wrap"><span><strong>Programming Simulator</strong> · CSS practice</span><span>Keep learning one small step at a time.</span></footer>
+  <dialog class="question-dialog" id="question-dialog" aria-labelledby="dialog-question-title">
+    <div class="question-dialog-head"><div><h2 id="dialog-question-title">HTML Basics</h2><span id="exercise-category-count">Topic 1 of 8</span></div><button class="question-dialog-close" id="question-dialog-close" type="button" aria-label="Close exercise">×</button></div>
+    <section class="question-card" aria-live="polite">
+      <div class="question-progress"><span class="question-progress-track"><span class="question-progress-fill" id="question-progress-fill"></span></span><span class="question-progress-count" id="question-progress-count">0 / 1 complete</span></div>
+      <p class="question-number" id="question-number">QUESTION 1</p>
+      <p class="question-text" id="question-text"></p>
+      <div class="answer-options" id="answer-options"></div>
+      <div class="answer-footer"><span class="answer-feedback" id="answer-feedback" role="status">Write your code, then check your answer.</span><div class="answer-actions"><button class="check-button" id="check-answer" type="button">Check answer</button></div></div>
+      <p class="hint">Tip: Run your code to preview it, then edit and check again if needed.</p>
+      <div class="success-panel" id="success-panel" aria-labelledby="success-title"><h2 id="success-title">Correct Answer!</h2><button id="success-next-question" type="button">Next Question »</button></div>
+      <div class="wrong-panel" id="wrong-panel" aria-labelledby="wrong-title"><h2 id="wrong-title">Wrong Answer!</h2><button id="try-again" type="button">Try Again</button></div>
+    </section>
+  </dialog>
+  <script src="../javascripts/topic-exercises.js"></script>
+  <script src="../javascripts/code-lab.js"></script>
+</body>
+</html>
