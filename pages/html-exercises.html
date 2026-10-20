@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Practice HTML with beginner-friendly exercises on elements, headings, links, images, lists, tables, and forms.">
+  <title>HTML Exercises — Programming Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/exercises.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">&lt;/&gt;</span><span>Programming Simulator</span></a>
+      <a class="back-link" href="../index.html#home">←&nbsp; Back to Home</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="page-intro">
+        <h1>HTML Exercises</h1>
+      <p>Practice HTML one idea at a time. Choose a topic, answer a question, and check what you know.</p>
+    </section>
+    <section class="progress-row" aria-label="HTML exercise progress">
+      <div class="progress-copy"><span class="progress-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="5" y="13" width="3.5" height="7" rx="1" fill="currentColor"/><rect x="10.25" y="9" width="3.5" height="11" rx="1" fill="currentColor"/><rect x="15.5" y="5" width="3.5" height="15" rx="1" fill="currentColor"/></svg></span><div><strong>Your progress</strong><span>Completed topics are saved on this device.</span></div></div>
+      <div class="progress-count"><strong id="done-count">0</strong><span>/ 12 done</span></div>
+    </section>
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+    <section aria-labelledby="categories-title">
+      <div class="categories-head"><h2 id="categories-title">Select a Category:</h2><a class="code-lab-jump" href="#code-lab">Want to write code? Try the editor ↓</a></div>
+      <div class="category-grid" id="category-grid">
+        <button class="category" type="button" data-category="HTML Basics"><span class="category-icon">01</span><span class="category-info"><strong>HTML Basics</strong><span>Document structure and doctype</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 3</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Elements"><span class="category-icon">&lt;&gt;</span><span class="category-info"><strong>Elements</strong><span>Tags and page content</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 5</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Attributes"><span class="category-icon">attr</span><span class="category-info"><strong>Attributes</strong><span>Extra information on elements</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 4</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Headings"><span class="category-icon">H1</span><span class="category-info"><strong>Headings</strong><span>Organize content with headings</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 3</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Paragraphs"><span class="category-icon">¶</span><span class="category-info"><strong>Paragraphs</strong><span>Write text in a paragraph</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 3</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Links"><span class="category-icon">↗</span><span class="category-info"><strong>Links</strong><span>Connect pages and resources</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 3</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Images"><span class="category-icon">img</span><span class="category-info"><strong>Images</strong><span>Add images and descriptions</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 4</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Lists"><span class="category-icon">☷</span><span class="category-info"><strong>Lists</strong><span>Ordered and unordered lists</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 3</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Tables"><span class="category-icon">▦</span><span class="category-info"><strong>Tables</strong><span>Rows, columns, and headers</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 4</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Forms"><span class="category-icon">□</span><span class="category-info"><strong>Forms</strong><span>Collect information from users</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 3</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Semantic HTML"><span class="category-icon">main</span><span class="category-info"><strong>Semantic HTML</strong><span>Use meaningful page elements</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 4</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+        <button class="category" type="button" data-category="Media"><span class="category-icon">▶</span><span class="category-info"><strong>Media</strong><span>Embed video and audio</span><span class="category-progress"><span class="category-progress-track"><i class="category-progress-fill"></i></span><small>0 / 4</small></span></span><span class="category-action"><span>Start</span><b>→</b></span></button>
+      </div>
+    </section>
+    <section class="code-lab" id="code-lab" data-language="HTML" aria-labelledby="code-lab-title">
+      <div class="code-lab-heading"><div class="kicker">Extra practice</div><h2 id="code-lab-title">Write and run HTML</h2><p>Try changing the example, then run your code to see the page update.</p></div>
+      <div class="code-lab-grid">
+        <div class="code-editor-panel"><div class="code-panel-head"><label for="code-input">Your code</label><span class="code-language">HTML</span></div><textarea id="code-input" spellcheck="false" autocapitalize="off" aria-describedby="code-lab-status"></textarea><div class="code-panel-actions"><button class="run-code" id="run-code" type="button">Run code <span aria-hidden="true">→</span></button><button class="reset-code" id="reset-code" type="button">Reset example</button></div></div>
+        <div class="code-output-panel"><div class="code-panel-head"><strong>Live preview</strong><span>OUTPUT</span></div><iframe id="code-preview" title="HTML code preview" sandbox="allow-scripts"></iframe><div id="sql-results" class="sql-results" hidden></div></div>
+      </div>
+      <p class="code-lab-status" id="code-lab-status" role="status" aria-live="polite">Edit the example and run your code.</p>
+    </section>
+  </main>
+  <footer class="wrap"><span><strong>Programming Simulator</strong> · HTML practice</span><span>Keep learning one small step at a time.</span></footer>
+  <dialog class="question-dialog" id="question-dialog" aria-labelledby="dialog-question-title">
+    <div class="question-dialog-head"><div><h2 id="dialog-question-title">HTML Basics</h2><span id="exercise-category-count">Topic 1 of 12</span></div><button class="question-dialog-close" id="question-dialog-close" type="button" aria-label="Close exercise">×</button></div>
+    <section class="question-card" aria-live="polite">
+      <div class="question-progress"><span class="question-progress-track"><span class="question-progress-fill" id="question-progress-fill"></span></span><span class="question-progress-count" id="question-progress-count">0 / 1 complete</span></div>
+      <p class="question-number" id="question-number">QUESTION 1</p>
+      <p class="question-text" id="question-text"></p>
+      <div class="answer-options" id="answer-options"></div>
+      <div class="answer-footer"><span class="answer-feedback" id="answer-feedback" role="status">Write your code, then check your answer.</span><div class="answer-actions"><button class="check-button" id="check-answer" type="button">Check answer</button></div></div>
+      <p class="hint">Tip: Run your code to preview it, then edit and check again if needed.</p>
+      <div class="success-panel" id="success-panel" aria-labelledby="success-title"><h2 id="success-title">Correct Answer!</h2><button id="success-next-question" type="button">Next Question »</button></div>
+      <div class="wrong-panel" id="wrong-panel" aria-labelledby="wrong-title"><h2 id="wrong-title">Wrong Answer!</h2><button id="try-again" type="button">Try Again</button></div>
+    </section>
+  </dialog>
+  <script>
+    const exercises = {
+      'HTML Basics': [
+        { question:'Create a heading text using the <h1> element.', options:['<!DOCTYPE html>','<html5>','<doctype>'], answer:'<h1>' },
+        { question:'Which element contains all visible page content?', options:['<body>','<head>','<title>'], answer:'<body>' },
+        { question:'Which element sets the text shown in the browser tab?', options:['<meta>','<title>','<caption>'], answer:'<title>' }
+      ],
+      'Elements': [
+        { question:'Make a paragraph using <p> and </p>.', options:['<text>','<p>','<paragraph>'], answer:'<p>' },
+        { question:'Which tag inserts a line break?', options:['<break>','<br>','<lb>'], answer:'<br>' },
+        { question:'Which element marks an item in a list?', options:['<li>','<item>','<list>'], answer:'<li>' },
+        { question:'Which tag creates the main heading in a document?', options:['<h1>','<head>','<heading>'], answer:'<h1>' },
+        { question:'Which element marks text with strong importance?', options:['<strong>','<bold>','<important>'], answer:'<strong>' }
+      ],
+      'Attributes': [
+        { question:'Which attribute provides the destination for a link?', options:['src','href','alt'], answer:'href' },
+        { question:'Which attribute sets the source file for an image?', options:['href','src','target'], answer:'src' },
+        { question:'Which attribute provides alternative text for an image?', options:['alt','name','value'], answer:'alt' },
+        { question:'Which attribute tells a link to open in a new tab?', options:['target="_blank"','open="new"','tab="new"'], answer:'target="_blank"' }
+      ],
+      'Headings': [
+        { question:'Which heading element is the largest by default?', options:['<h6>','<heading>','<h1>'], answer:'<h1>' },
+        { question:'Which heading element is the smallest by default?', options:['<h1>','<h6>','<h7>'], answer:'<h6>' },
+        { question:'Which heading usually follows an <h1> as a subsection?', options:['<h2>','<h5>','<p>'], answer:'<h2>' }
+      ],
+      'Paragraphs': [
+        { question:'Which tag starts a paragraph in HTML?', options:['<p>','<para>','<text>'], answer:'<p>' },
+        { question:'Which element creates a thematic break between sections?', options:['<hr>','<line>','<break>'], answer:'<hr>' },
+        { question:'Which tag adds a line break inside text?', options:['<br>','<lb>','<newline>'], answer:'<br>' }
+      ],
+      'Links': [
+        { question:'Which element creates a clickable link?', options:['<link>','<a>','<href>'], answer:'<a>' },
+        { question:'Which attribute contains a link destination?', options:['src','href','alt'], answer:'href' },
+        { question:'Which target value opens a link in a new tab?', options:['_blank','_newtab','_window'], answer:'_blank' }
+      ],
+      'Images': [
+        { question:'Which element displays an image?', options:['<picture-file>','<img>','<image>'], answer:'<img>' },
+        { question:'Which attribute gives an image its file location?', options:['href','src','alt'], answer:'src' },
+        { question:'Why is alt text useful?', options:['It describes the image','It changes image size','It creates a link'], answer:'It describes the image' },
+        { question:'Which attribute controls the image description for assistive technology?', options:['alt','title','caption'], answer:'alt' }
+      ],
+      'Lists': [
+        { question:'Which element creates a numbered list?', options:['<ul>','<ol>','<li>'], answer:'<ol>' },
+        { question:'Which element creates a bulleted list?', options:['<ul>','<ol>','<dl>'], answer:'<ul>' },
+        { question:'Which element wraps each item in an ordered or unordered list?', options:['<item>','<li>','<list>'], answer:'<li>' }
+      ],
+      'Tables': [
+        { question:'Which element represents a table row?', options:['<td>','<th>','<tr>'], answer:'<tr>' },
+        { question:'Which element represents a regular table cell?', options:['<td>','<tr>','<tc>'], answer:'<td>' },
+        { question:'Which element marks a header cell in a table?', options:['<thead>','<th>','<header>'], answer:'<th>' },
+        { question:'Which element adds a caption to a table?', options:['<caption>','<title>','<label>'], answer:'<caption>' }
+      ],
+      'Forms': [
+        { question:'Which element creates a form?', options:['<form>','<input>','<fieldset>'], answer:'<form>' },
+        { question:'Which input type is designed for a single line of text?', options:['type="text"','type="paragraph"','type="line"'], answer:'type="text"' },
+        { question:'Which element can submit form data when clicked?', options:['<button type="submit">','<label>','<legend>'], answer:'<button type="submit">' }
+      ],
+      'Semantic HTML': [
+        { question:'Which element usually contains the main page content?', options:['<main>','<span>','<b>'], answer:'<main>' },
+        { question:'Which element groups navigation links?', options:['<nav>','<aside>','<summary>'], answer:'<nav>' },
+        { question:'Which element represents the footer of a page or section?', options:['<bottom>','<footer>','<end>'], answer:'<footer>' },
+        { question:'Which element introduces content at the top of a page or section?', options:['<header>','<top>','<intro>'], answer:'<header>' }
+      ],
+      'Media': [
+        { question:'Which element embeds a video in a webpage?', options:['<movie>','<video>','<media>'], answer:'<video>' },
+        { question:'Which element embeds sound content?', options:['<sound>','<audio>','<music>'], answer:'<audio>' },
+        { question:'Which boolean attribute displays built-in playback controls?', options:['controls','play','toolbar'], answer:'controls' },
+        { question:'Which element can provide multiple media file choices?', options:['<source>','<choice>','<tracklist>'], answer:'<source>' }
+      ]
+    };
+    const categories = [...document.querySelectorAll('.category')];
+    const questionDialog = document.querySelector('#question-dialog');
+    const answerOptions = document.querySelector('#answer-options');
+    const feedback = document.querySelector('#answer-feedback');
+    const successPanel = document.querySelector('#success-panel');
+    const wrongPanel = document.querySelector('#wrong-panel');
+    const progressKey = 'programming-simulator-html-coding-exercise-progress-v2';
+    let completedQuestions = JSON.parse(localStorage.getItem(progressKey) || '{}');
+    let selected = '';
+    let expected = '';
+    let currentCategory = '';
+    let currentQuestionIndex = 0;
+
+    function completedInCategory(name) { return completedQuestions[name] || []; }
+    function practicalPrompt(question, answer) {
+      if (answer === '<h1>') return 'Create a heading text using the <h1> element.';
+      if (answer === '<p>') return 'Make a paragraph using <p> and </p>.';
+      return `Write a small HTML example using “${answer}” to practice this concept: ${question}`;
+    }
+    function updateProgress() {
+      const completedTopics = categories.filter(card => completedInCategory(card.dataset.category).length === exercises[card.dataset.category].length).length;
+      document.querySelector('#done-count').textContent = completedTopics;
+      document.querySelector('#progress-fill').style.width = `${(completedTopics / categories.length) * 100}%`;
+      categories.forEach(card => {
+        const total = exercises[card.dataset.category].length;
+        const count = completedInCategory(card.dataset.category).length;
+        const done = count === total;
+        card.classList.toggle('done', done);
+        card.querySelector('.category-action span').textContent = done ? 'Done' : 'Start';
+        card.querySelector('.category-progress small').textContent = `${count} / ${total}`;
+        card.querySelector('.category-progress-fill').style.width = `${(count / total) * 100}%`;
+      });
+    }
+    function openCategory(name) {
+      const questions = exercises[name];
+      currentCategory = name;
+      const completed = completedInCategory(name);
+      currentQuestionIndex = questions.findIndex((_, index) => !completed.includes(index));
+      if (currentQuestionIndex < 0) currentQuestionIndex = 0;
+      const data = questions[currentQuestionIndex];
+      selected = '';
+      expected = data.answer;
+      document.querySelector('#dialog-question-title').textContent = name;
+      document.querySelector('#exercise-category-count').textContent = `TOPIC ${categories.findIndex(c => c.dataset.category === name) + 1} OF ${categories.length}`;
+      document.querySelector('#question-progress-fill').style.width = `${(completed.length / questions.length) * 100}%`;
+      document.querySelector('#question-progress-count').textContent = `${completed.length} / ${questions.length} complete`;
+      document.querySelector('#question-number').textContent = `QUESTION ${currentQuestionIndex + 1} OF ${questions.length}`;
+      document.querySelector('#question-text').textContent = practicalPrompt(data.question, data.answer);
+      window.setExerciseCodeTask?.(data.question, data.answer);
+      successPanel.classList.remove('show');
+      wrongPanel.classList.remove('show');
+      feedback.textContent = 'Write your code, then check your answer.';
+      answerOptions.hidden = true;
+      answerOptions.replaceChildren();
+      if (!questionDialog.open) questionDialog.showModal();
+      document.querySelector('#question-dialog-close').focus();
+    }
+    categories.forEach(card => card.addEventListener('click', () => openCategory(card.dataset.category)));
+    document.querySelector('#question-dialog-close').addEventListener('click', () => questionDialog.close());
+    document.querySelector('#check-answer').addEventListener('click', () => {
+      if (!window.checkExerciseCodeTask?.()) {
+        feedback.textContent = 'That code does not meet the task yet. Edit it and try again.';
+        wrongPanel.classList.add('show');
+        document.querySelector('#try-again').focus();
+        return;
+      }
+      {
+        const completed = completedInCategory(currentCategory);
+        if (!completed.includes(currentQuestionIndex)) completed.push(currentQuestionIndex);
+        completedQuestions[currentCategory] = completed;
+        localStorage.setItem(progressKey, JSON.stringify(completedQuestions));
+        updateProgress();
+        document.querySelector('#question-progress-fill').style.width = `${(completed.length / exercises[currentCategory].length) * 100}%`;
+        document.querySelector('#question-progress-count').textContent = `${completed.length} / ${exercises[currentCategory].length} complete`;
+        feedback.textContent = 'Correct! Question completed.';
+        const categoryDone = completed.length === exercises[currentCategory].length;
+        const nextButton = document.querySelector('#success-next-question');
+        nextButton.textContent = categoryDone ? 'Next Category »' : 'Next Question »';
+        successPanel.classList.add('show');
+        nextButton.focus();
+      }
+    });
+    document.querySelector('#try-again').addEventListener('click', () => {
+      wrongPanel.classList.remove('show');
+      feedback.textContent = 'Edit your code, then check your answer again.';
+      document.querySelector('#code-input')?.focus();
+    });
+    document.querySelector('#success-next-question').addEventListener('click', () => {
+      const completed = completedInCategory(currentCategory);
+      if (completed.length < exercises[currentCategory].length) {
+        openCategory(currentCategory);
+        return;
+      }
+      const currentIndex = categories.findIndex(card => card.dataset.category === currentCategory);
+      const next = categories.slice(currentIndex + 1).find(card => completedInCategory(card.dataset.category).length < exercises[card.dataset.category].length) || categories.find(card => completedInCategory(card.dataset.category).length < exercises[card.dataset.category].length);
+      openCategory(next ? next.dataset.category : categories[0].dataset.category);
+    });
+    updateProgress();
+  </script>
+  <script src="../javascripts/code-lab.js"></script>
+</body>
+</html>
