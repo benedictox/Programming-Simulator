@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Beginner-friendly CSS tutorials and a practical reference for styling responsive web pages.">
+  <title>CSS Learning Materials — Programming Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../stylesheets/learning.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html#home" aria-label="Programming Simulator home"><span class="brand-mark">&lt;/&gt;</span><span>Programming Simulator</span></a><nav class="header-actions" aria-label="Page navigation"><a class="back-link" href="../index.html#home">← <span>Back to Home</span></a><a class="primary-link" href="css-exercises.html">Practice CSS</a></nav></div></header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow">LEARNING MATERIALS / CSS</p><h1 id="page-title">CSS TUTORIALS &amp; DOCUMENTATION</h1><p class="intro-copy">Learn how CSS controls the look and layout of a web page. Start with selectors and simple properties, then practice building responsive layouts.</p><div class="intro-actions"><a class="primary-link" href="#tutorials">Browse Tutorials ↓</a><a class="secondary-link" href="#reference">Open CSS Reference</a></div></section>
+    <section class="tutorials-section" id="tutorials" aria-labelledby="tutorials-title"><div class="section-heading"><div><p class="eyebrow">START WITH THE BASICS</p><h2 id="tutorials-title">CSS TUTORIAL LIBRARY</h2></div><span class="count-label">18 BEGINNER LESSONS</span></div>
+      <div class="tutorial-layout"><aside class="lesson-index" aria-label="CSS tutorial list"><h3>All Tutorials</h3>
+        <a href="#css-intro"><span>01</span> CSS Introduction</a><a href="#syntax"><span>02</span> CSS Syntax</a><a href="#selectors"><span>03</span> Selectors</a><a href="#colors"><span>04</span> Colors</a><a href="#backgrounds"><span>05</span> Backgrounds</a><a href="#box-model"><span>06</span> The Box Model</a><a href="#spacing"><span>07</span> Margins and Padding</a><a href="#borders"><span>08</span> Borders and Corners</a><a href="#typography"><span>09</span> Text and Fonts</a><a href="#display"><span>10</span> Display</a><a href="#position"><span>11</span> Positioning</a><a href="#flexbox"><span>12</span> Flexbox</a><a href="#grid"><span>13</span> CSS Grid</a><a href="#responsive"><span>14</span> Responsive Design</a><a href="#variables"><span>15</span> CSS Variables</a><a href="#pseudo"><span>16</span> Pseudo-classes</a><a href="#transitions"><span>17</span> Transitions</a><a href="#accessibility"><span>18</span> Accessible Styling</a>
+      </aside><div class="lesson-list">
+        <article class="lesson" id="css-intro"><span class="lesson-number">LESSON 01</span><h3>CSS Introduction</h3><p>CSS (Cascading Style Sheets) describes how HTML content should look. It controls color, spacing, typography, and page layout.</p><pre><code>p {
+  color: #333;
+  font-size: 1rem;
+}</code></pre></article>
+        <article class="lesson" id="syntax"><span class="lesson-number">LESSON 02</span><h3>CSS Syntax</h3><p>A rule has a selector and a declaration block. Each declaration pairs a property with a value.</p><pre><code>h1 {                 /* selector */
+  color: navy;        /* property: value */
+  margin-bottom: 1rem;
+}</code></pre></article>
+        <article class="lesson" id="selectors"><span class="lesson-number">LESSON 03</span><h3>Selectors</h3><p>Select elements by tag, class, or id. Classes are reusable; an id should identify one unique element on a page.</p><pre><code>p { line-height: 1.6; }
+.notice { padding: 1rem; }
+#main-title { color: #171918; }</code></pre></article>
+        <article class="lesson" id="colors"><span class="lesson-number">LESSON 04</span><h3>Colors</h3><p>Set foreground colors with <code>color</code> and choose accessible combinations with enough contrast.</p><pre><code>body { color: #202321; }
+.button { background-color: #d8f36a; }</code></pre></article>
+        <article class="lesson" id="backgrounds"><span class="lesson-number">LESSON 05</span><h3>Backgrounds</h3><p>Background properties can add a color or image behind an element. Keep text readable over every background.</p><pre><code>.card {
+  background-color: #f1f2ef;
+  background-image: url("pattern.png");
+  background-size: cover;
+}</code></pre></article>
+        <article class="lesson" id="box-model"><span class="lesson-number">LESSON 06</span><h3>The Box Model</h3><p>Each element is a box made of content, padding, border, and margin. <code>border-box</code> makes declared width include padding and border.</p><pre><code>* { box-sizing: border-box; }
+.card { width: 20rem; padding: 1rem; border: 1px solid #ddd; }</code></pre></article>
+        <article class="lesson" id="spacing"><span class="lesson-number">LESSON 07</span><h3>Margins and Padding</h3><p>Padding adds space inside a border. Margin adds space outside it. Use consistent spacing values to make a layout easier to scan.</p><pre><code>.card { padding: 1.25rem; margin: 0 0 1rem; }</code></pre></article>
+        <article class="lesson" id="borders"><span class="lesson-number">LESSON 08</span><h3>Borders and Corners</h3><p>Borders outline elements. Use <code>border-radius</code> to soften corners and keep edge treatments consistent.</p><pre><code>.panel {
+  border: 1px solid #dfe2dd;
+  border-radius: 12px;
+}</code></pre></article>
+        <article class="lesson" id="typography"><span class="lesson-number">LESSON 09</span><h3>Text and Fonts</h3><p>Use readable font sizes, line spacing, and a clear hierarchy. A fallback font stack keeps text available if a preferred font cannot load.</p><pre><code>body { font-family: Arial, sans-serif; }
+h1 { font-size: 2rem; line-height: 1.1; }
+p { line-height: 1.65; }</code></pre></article>
+        <article class="lesson" id="display"><span class="lesson-number">LESSON 10</span><h3>Display</h3><p>The <code>display</code> property affects how an element participates in layout. Flexbox and Grid are useful tools for arranging groups of elements.</p><pre><code>.toolbar { display: flex; gap: .75rem; }
+.cards { display: grid; }</code></pre></article>
+        <article class="lesson" id="position"><span class="lesson-number">LESSON 11</span><h3>Positioning</h3><p>Positioning controls how an element is placed. Use normal document flow by default; choose sticky or fixed positioning when the interaction needs it.</p><pre><code>.site-header { position: sticky; top: 0; }
+.badge { position: absolute; top: .5rem; right: .5rem; }</code></pre></article>
+        <article class="lesson" id="flexbox"><span class="lesson-number">LESSON 12</span><h3>Flexbox</h3><p>Flexbox arranges items along one main axis. It is well suited to navigation bars, toolbars, and rows that need flexible spacing.</p><pre><code>.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}</code></pre></article>
+        <article class="lesson" id="grid"><span class="lesson-number">LESSON 13</span><h3>CSS Grid</h3><p>Grid lays out content in rows and columns. Use flexible tracks so cards can adapt to the available width.</p><pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}</code></pre></article>
+        <article class="lesson" id="responsive"><span class="lesson-number">LESSON 14</span><h3>Responsive Design</h3><p>Responsive layouts adapt to different screens. Start with flexible sizing and add media queries where the content needs a layout change.</p><pre><code>.content { width: min(100% - 2rem, 70rem); margin: auto; }
+@media (max-width: 600px) {
+  .columns { grid-template-columns: 1fr; }
+}</code></pre></article>
+        <article class="lesson" id="variables"><span class="lesson-number">LESSON 15</span><h3>CSS Variables</h3><p>Custom properties store reusable values. Define them on a shared element and refer to them with <code>var()</code>.</p><pre><code>:root { --ink: #171918; --space: 1rem; }
+.card { color: var(--ink); padding: var(--space); }</code></pre></article>
+        <article class="lesson" id="pseudo"><span class="lesson-number">LESSON 16</span><h3>Pseudo-classes</h3><p>Pseudo-classes style elements in a state or position, such as a hovered link, a focused input, or the first item in a list.</p><pre><code>a:hover { text-decoration: underline; }
+input:focus-visible { outline: 3px solid #87945d; }</code></pre></article>
+        <article class="lesson" id="transitions"><span class="lesson-number">LESSON 17</span><h3>Transitions</h3><p>Transitions smoothly animate a property when its value changes. Keep motion short and avoid animating layout-heavy properties.</p><pre><code>.button { transition: transform .2s ease, background-color .2s ease; }
+.button:hover { transform: translateY(-2px); }</code></pre></article>
+        <article class="lesson" id="accessibility"><span class="lesson-number">LESSON 18</span><h3>Accessible Styling</h3><p>Make keyboard focus visible, preserve readable contrast, and respect reduced-motion preferences. Do not use color as the only way to communicate a state.</p><pre><code>:focus-visible { outline: 3px solid #52613b; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto; }
+}</code></pre></article>
+      </div></div>
+    </section>
+    <section class="reference-section" id="reference" aria-labelledby="reference-title"><div class="section-heading"><div><p class="eyebrow">QUICK LOOKUP</p><h2 id="reference-title">CSS DOCUMENTATION</h2></div><a class="text-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">Full MDN Reference ↗</a></div><p class="reference-copy">Common CSS properties to keep nearby while styling a page.</p><div class="reference-table-wrap"><table class="reference-table"><thead><tr><th scope="col">Property</th><th scope="col">What it controls</th><th scope="col">Example</th></tr></thead><tbody>
+        <tr><th scope="row"><code>color</code></th><td>Text color</td><td><code>color: #222;</code></td></tr><tr><th scope="row"><code>background</code></th><td>Background color or image</td><td><code>background: white;</code></td></tr><tr><th scope="row"><code>margin</code></th><td>Space outside an element</td><td><code>margin: 1rem;</code></td></tr><tr><th scope="row"><code>padding</code></th><td>Space between content and border</td><td><code>padding: 1rem;</code></td></tr><tr><th scope="row"><code>display</code></th><td>Layout behavior</td><td><code>display: flex;</code></td></tr><tr><th scope="row"><code>font-size</code></th><td>Text size</td><td><code>font-size: 1rem;</code></td></tr><tr><th scope="row"><code>border</code></th><td>Element outline</td><td><code>border: 1px solid #ddd;</code></td></tr><tr><th scope="row"><code>gap</code></th><td>Space between flex/grid items</td><td><code>gap: 1rem;</code></td></tr>
+      </tbody></table></div><div class="attributes-box"><h3>CSS concepts to remember</h3><dl><div><dt>Selector</dt><dd>Chooses which elements a rule styles.</dd></div><div><dt>Specificity</dt><dd>Helps determine which matching rule takes precedence.</dd></div><div><dt>Cascade</dt><dd>Combines declarations according to origin, importance, and order.</dd></div><div><dt>Media query</dt><dd>Applies styles when a condition, such as screen width, matches.</dd></div></dl></div></section>
+    <section class="next-step"><div><p class="eyebrow">LEARN BY PRACTICING</p><h2>Ready to style a page?</h2><p>Use the CSS exercise editor to practice selectors, properties, and layout.</p></div><a class="primary-link" href="css-exercises.html">Go to CSS Exercises →</a></section>
+  </main>
+  <footer class="wrap site-footer"><span><strong>Programming Simulator</strong> · Learn the basics. Practice as you go.</span></footer>
+</body>
+</html>
