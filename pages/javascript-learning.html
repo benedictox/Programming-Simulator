@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Beginner-friendly JavaScript tutorials and a practical reference for adding behavior to web pages.">
+  <title>JavaScript Learning Materials — Programming Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../stylesheets/learning.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html#home" aria-label="Programming Simulator home"><span class="brand-mark">&lt;/&gt;</span><span>Programming Simulator</span></a><nav class="header-actions" aria-label="Page navigation"><a class="back-link" href="../index.html#home">← <span>Back to Home</span></a><a class="primary-link" href="javascript-exercises.html">Practice JavaScript</a></nav></div></header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow">LEARNING MATERIALS / JAVASCRIPT</p><h1 id="page-title">JAVASCRIPT TUTORIALS &amp; DOCUMENTATION</h1><p class="intro-copy">Learn the language that brings pages to life. Begin with values and variables, then use functions, events, and the DOM to make interactive projects.</p><div class="intro-actions"><a class="primary-link" href="#tutorials">Browse Tutorials ↓</a><a class="secondary-link" href="#reference">Open JavaScript Reference</a></div></section>
+    <section class="tutorials-section" id="tutorials" aria-labelledby="tutorials-title"><div class="section-heading"><div><p class="eyebrow">START WITH THE BASICS</p><h2 id="tutorials-title">JAVASCRIPT TUTORIAL LIBRARY</h2></div><span class="count-label">18 BEGINNER LESSONS</span></div>
+      <div class="tutorial-layout"><aside class="lesson-index" aria-label="JavaScript tutorial list"><h3>All Tutorials</h3>
+        <a href="#js-intro"><span>01</span> JavaScript Introduction</a><a href="#add-js"><span>02</span> Adding JavaScript</a><a href="#variables"><span>03</span> Variables</a><a href="#data-types"><span>04</span> Data Types</a><a href="#operators"><span>05</span> Operators</a><a href="#strings"><span>06</span> Strings</a><a href="#arrays"><span>07</span> Arrays</a><a href="#objects"><span>08</span> Objects</a><a href="#conditions"><span>09</span> Conditions</a><a href="#loops"><span>10</span> Loops</a><a href="#functions"><span>11</span> Functions</a><a href="#dom"><span>12</span> The DOM</a><a href="#events"><span>13</span> Events</a><a href="#forms"><span>14</span> Forms and Validation</a><a href="#errors"><span>15</span> Errors and Debugging</a><a href="#json"><span>16</span> JSON</a><a href="#async"><span>17</span> Asynchronous JavaScript</a><a href="#modules"><span>18</span> Modules and Next Steps</a>
+      </aside><div class="lesson-list">
+        <article class="lesson" id="js-intro"><span class="lesson-number">LESSON 01</span><h3>JavaScript Introduction</h3><p>JavaScript is a programming language used to add behavior to web pages. It can respond to user actions, update page content, and work with data.</p><pre><code>console.log("Hello, world!");</code></pre></article>
+        <article class="lesson" id="add-js"><span class="lesson-number">LESSON 02</span><h3>Adding JavaScript</h3><p>Place scripts in a separate file and use <code>defer</code> so the browser parses the page before running the script.</p><pre><code>&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre></article>
+        <article class="lesson" id="variables"><span class="lesson-number">LESSON 03</span><h3>Variables</h3><p>Use <code>const</code> for bindings that will not be reassigned and <code>let</code> when reassignment is needed. Avoid declaring new variables with <code>var</code> in modern code.</p><pre><code>const learner = "Alex";
+let lessonsCompleted = 0;
+lessonsCompleted += 1;</code></pre></article>
+        <article class="lesson" id="data-types"><span class="lesson-number">LESSON 04</span><h3>Data Types</h3><p>JavaScript values include strings, numbers, booleans, objects, and <code>undefined</code>. Use <code>null</code> to represent an intentional absence of a value.</p><pre><code>const title = "HTML basics";
+const score = 10;
+const finished = false;</code></pre></article>
+        <article class="lesson" id="operators"><span class="lesson-number">LESSON 05</span><h3>Operators</h3><p>Operators calculate values and compare them. Use strict equality (<code>===</code>) to compare both value and type in most cases.</p><pre><code>const total = 4 + 6;
+const passed = total >= 8;
+console.log(passed === true);</code></pre></article>
+        <article class="lesson" id="strings"><span class="lesson-number">LESSON 06</span><h3>Strings</h3><p>Strings store text. Template literals use backticks and let you insert expressions with <code>${...}</code>.</p><pre><code>const name = "Alex";
+const greeting = `Hello, ${name}!`;</code></pre></article>
+        <article class="lesson" id="arrays"><span class="lesson-number">LESSON 07</span><h3>Arrays</h3><p>Arrays store ordered collections. Their indexes start at zero; use methods such as <code>push</code> to add an item.</p><pre><code>const topics = ["HTML", "CSS"];
+topics.push("JavaScript");
+console.log(topics[0]);</code></pre></article>
+        <article class="lesson" id="objects"><span class="lesson-number">LESSON 08</span><h3>Objects</h3><p>Objects group related values under property names. Access a property with dot notation or bracket notation.</p><pre><code>const learner = { name: "Alex", level: 1 };
+console.log(learner.name);</code></pre></article>
+        <article class="lesson" id="conditions"><span class="lesson-number">LESSON 09</span><h3>Conditions</h3><p>Use <code>if</code> and <code>else</code> to choose which code runs based on a condition.</p><pre><code>const score = 85;
+if (score >= 70) {
+  console.log("Passed");
+} else {
+  console.log("Try again");
+}</code></pre></article>
+        <article class="lesson" id="loops"><span class="lesson-number">LESSON 10</span><h3>Loops</h3><p>Loops repeat a block of code. A <code>for...of</code> loop is a clear way to visit each value in an iterable such as an array.</p><pre><code>const topics = ["HTML", "CSS", "SQL"];
+for (const topic of topics) {
+  console.log(topic);
+}</code></pre></article>
+        <article class="lesson" id="functions"><span class="lesson-number">LESSON 11</span><h3>Functions</h3><p>Functions package reusable instructions. Parameters receive inputs; <code>return</code> sends a result back to the caller.</p><pre><code>function double(number) {
+  return number * 2;
+}
+console.log(double(4));</code></pre></article>
+        <article class="lesson" id="dom"><span class="lesson-number">LESSON 12</span><h3>The DOM</h3><p>The Document Object Model represents the page as objects JavaScript can inspect and change. Select an element and update its text safely.</p><pre><code>const heading = document.querySelector("h1");
+heading.textContent = "Welcome!";</code></pre></article>
+        <article class="lesson" id="events"><span class="lesson-number">LESSON 13</span><h3>Events</h3><p>Events let code respond to user interactions. Register a listener on the element that should respond.</p><pre><code>const button = document.querySelector("button");
+button.addEventListener("click", () =&gt; {
+  console.log("Button clicked");
+});</code></pre></article>
+        <article class="lesson" id="forms"><span class="lesson-number">LESSON 14</span><h3>Forms and Validation</h3><p>Listen for the form's submit event, prevent a page reload when handling it in JavaScript, and check the values before using them.</p><pre><code>form.addEventListener("submit", event =&gt; {
+  event.preventDefault();
+  const formData = new FormData(form);
+  console.log(formData.get("email"));
+});</code></pre></article>
+        <article class="lesson" id="errors"><span class="lesson-number">LESSON 15</span><h3>Errors and Debugging</h3><p>Read the browser console when something goes wrong. Use clear variable names, inspect values, and fix the first reported error before moving on.</p><pre><code>console.log("Current value:", value);
+// Use a breakpoint in DevTools to pause execution.</code></pre></article>
+        <article class="lesson" id="json"><span class="lesson-number">LESSON 16</span><h3>JSON</h3><p>JSON is a text format for structured data. JavaScript can convert between JSON text and values with <code>JSON.parse</code> and <code>JSON.stringify</code>.</p><pre><code>const data = { topic: "HTML" };
+const text = JSON.stringify(data);
+const copy = JSON.parse(text);</code></pre></article>
+        <article class="lesson" id="async"><span class="lesson-number">LESSON 17</span><h3>Asynchronous JavaScript</h3><p>Promises represent work that may finish later. <code>async</code> and <code>await</code> help write asynchronous code in a readable sequence.</p><pre><code>async function loadData() {
+  const response = await fetch("data.json");
+  if (!response.ok) throw new Error("Request failed");
+  return response.json();
+}</code></pre></article>
+        <article class="lesson" id="modules"><span class="lesson-number">LESSON 18</span><h3>Modules and Next Steps</h3><p>Modules split larger programs into files. Export values from one module and import them where they are used. Practice by building a small interactive page.</p><pre><code>// greeting.js
+export function greet(name) { return `Hello, ${name}`; }
+// app.js
+import { greet } from "./greeting.js";</code></pre><p class="lesson-links"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">MDN JavaScript guide ↗</a></p></article>
+      </div></div>
+    </section>
+    <section class="reference-section" id="reference" aria-labelledby="reference-title"><div class="section-heading"><div><p class="eyebrow">QUICK LOOKUP</p><h2 id="reference-title">JAVASCRIPT DOCUMENTATION</h2></div><a class="text-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank" rel="noreferrer">Full MDN Reference ↗</a></div><p class="reference-copy">Common JavaScript syntax and browser APIs for beginner projects.</p><div class="reference-table-wrap"><table class="reference-table"><thead><tr><th scope="col">Syntax / API</th><th scope="col">Purpose</th><th scope="col">Example</th></tr></thead><tbody>
+        <tr><th scope="row"><code>const</code></th><td>Declare a binding that is not reassigned</td><td><code>const count = 3;</code></td></tr><tr><th scope="row"><code>let</code></th><td>Declare a binding that can be reassigned</td><td><code>let score = 0;</code></td></tr><tr><th scope="row"><code>function</code></th><td>Define reusable instructions</td><td><code>function add(a, b) { return a + b; }</code></td></tr><tr><th scope="row"><code>if / else</code></th><td>Run code based on a condition</td><td><code>if (ready) { start(); }</code></td></tr><tr><th scope="row"><code>querySelector()</code></th><td>Select the first matching element</td><td><code>document.querySelector(".card")</code></td></tr><tr><th scope="row"><code>addEventListener()</code></th><td>Respond to an event</td><td><code>button.addEventListener("click", run)</code></td></tr><tr><th scope="row"><code>JSON.parse()</code></th><td>Convert JSON text into a JavaScript value</td><td><code>JSON.parse(text)</code></td></tr><tr><th scope="row"><code>fetch()</code></th><td>Make a network request</td><td><code>const response = await fetch(url)</code></td></tr>
+      </tbody></table></div><div class="attributes-box"><h3>JavaScript concepts to remember</h3><dl><div><dt>Scope</dt><dd>Determines where a variable can be accessed.</dd></div><div><dt>Parameter</dt><dd>A named input a function can receive.</dd></div><div><dt>Return value</dt><dd>The result a function sends back to its caller.</dd></div><div><dt>Promise</dt><dd>An object representing the eventual result of an asynchronous operation.</dd></div></dl></div></section>
+    <section class="next-step"><div><p class="eyebrow">LEARN BY PRACTICING</p><h2>Ready to make a page interactive?</h2><p>Practice JavaScript concepts in the exercise area and build confidence one task at a time.</p></div><a class="primary-link" href="javascript-exercises.html">Go to JavaScript Exercises →</a></section>
+  </main>
+  <footer class="wrap site-footer"><span><strong>Programming Simulator</strong> · Learn the basics. Practice as you go.</span></footer>
+</body>
+</html>
