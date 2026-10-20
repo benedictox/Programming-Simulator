@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Explore beginner-friendly programming learning materials and practice exercises with Programming Simulator.">
+  <title>Programming Simulator — Learn by doing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+  <header class="header" data-reveal>
+    <div class="wrap header-main">
+      <a class="brand" href="#home" aria-label="Programming Simulator home"><span class="brand-mark">&lt;/&gt;</span><span>Programming Simulator</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-home" href="#home">Home</a>
+        <div class="nav-group">
+          <button class="nav-trigger" id="learning-nav-trigger" type="button" aria-haspopup="dialog" aria-expanded="false">Learning Materials</button>
+        </div>
+        <div class="nav-group"><button class="nav-trigger" id="exercises-nav-trigger" type="button" aria-haspopup="dialog" aria-expanded="false">Exercises</button></div>
+        <a class="nav-home nav-about" href="#about">About</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="home" class="wrap">
+    <section class="hero" aria-labelledby="hero-title" data-reveal>
+      <div>
+        <div class="eyebrow"><i></i> Free programming tutorials for beginners</div>
+        <h1 id="hero-title">Learn to code.<br><span>Build something.</span></h1>
+        <p class="hero-copy">Explore beginner-friendly learning materials and practice the skills you need to start building with code.</p>
+        <div class="hero-actions">
+          <button class="hero-action primary" id="hero-learning-link" type="button">Explore learning materials <span aria-hidden="true">→</span></button>
+          <button class="hero-action secondary" id="hero-exercises-link" type="button">Try an exercise</button>
+        </div>
+      </div>
+      <div class="hero-example">
+        <div class="example-head"><span>Your first webpage</span><span>HTML</span></div>
+        <pre class="example-code"><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;</span>Hello, world!<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>I'm learning to code.<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+        <div class="example-foot"><span>Small steps. Real results.</span></div>
+      </div>
+    </section>
+
+    <section class="topic-explorer" aria-labelledby="topic-explorer-title">
+      <div class="starter-heading" data-reveal>
+        <div class="kicker">Explore the basics</div>
+        <h2 id="topic-explorer-title">Four building blocks of the web</h2>
+        <p>Choose a topic for a quick introduction, then continue learning at your own pace.</p>
+      </div>
+      <div class="topic-grid">
+        <button class="topic-tile" type="button" data-open-topic="HTML" data-reveal style="--reveal-delay: 40ms"><span class="topic-tile-mark" aria-hidden="true">&lt;/&gt;</span><strong>HTML</strong><p>Structure pages with headings, text, links, and more.</p><span class="topic-tile-link">Explore HTML <b aria-hidden="true">→</b></span></button>
+        <button class="topic-tile" type="button" data-open-topic="CSS" data-reveal style="--reveal-delay: 100ms"><span class="topic-tile-mark" aria-hidden="true">#</span><strong>CSS</strong><p>Style a page with colors, spacing, and layout.</p><span class="topic-tile-link">Explore CSS <b aria-hidden="true">→</b></span></button>
+        <button class="topic-tile" type="button" data-open-topic="JavaScript" data-reveal style="--reveal-delay: 160ms"><span class="topic-tile-mark" aria-hidden="true">JS</span><strong>JavaScript</strong><p>Add interactions and behavior to your webpages.</p><span class="topic-tile-link">Explore JavaScript <b aria-hidden="true">→</b></span></button>
+        <button class="topic-tile" type="button" data-open-topic="SQL" data-reveal style="--reveal-delay: 220ms"><span class="topic-tile-mark" aria-hidden="true">DB</span><strong>SQL</strong><p>Ask questions of information stored in databases.</p><span class="topic-tile-link">Explore SQL <b aria-hidden="true">→</b></span></button>
+      </div>
+    </section>
+
+    <section class="starter-path" aria-labelledby="starter-path-title">
+      <div class="starter-heading" data-reveal>
+        <div class="kicker">A SKILL FOR EVERY DEVELOPER</div>
+        <h2 id="starter-path-title">Debug one step at a time</h2>
+        <p>When something breaks, use a calm, repeatable process to find the cause.</p>
+      </div>
+      <div class="starter-steps">
+        <article class="starter-step" data-reveal style="--reveal-delay: 40ms">
+          <span class="step-number">STEP 01</span>
+          <h3>Reproduce the problem</h3>
+          <p>Try the same action again. Note what you expected to happen and what happened instead.</p>
+        </article>
+        <article class="starter-step" data-reveal style="--reveal-delay: 100ms">
+          <span class="step-number">STEP 02</span>
+          <h3>Look for one clue</h3>
+          <p>Read the full error message. Check the relevant element, line, or query before changing code.</p>
+        </article>
+        <article class="starter-step" data-reveal style="--reveal-delay: 160ms">
+          <span class="step-number">STEP 03</span>
+          <h3>Test one change</h3>
+          <p>Change one thing, run the code again, and keep the change only if it moves you closer.</p>
+        </article>
+      </div>
+      <aside class="starter-challenge" data-reveal>
+        <span class="challenge-mark" aria-hidden="true">✓</span>
+        <div><strong>Before you ask for help</strong><p>Share the smallest code example that still shows the issue, describe what you tried, and include the exact error message.</p></div>
+      </aside>
+    </section>
+
+    <section class="practice-guide" aria-labelledby="practice-guide-title">
+      <div class="starter-heading" data-reveal>
+        <div class="kicker">Learn as you practice</div>
+        <h2 id="practice-guide-title">Make each practice session count</h2>
+        <p>You do not need to memorize everything. Work through one small idea at a time.</p>
+      </div>
+      <div class="practice-tips">
+        <article class="practice-tip" data-reveal style="--reveal-delay: 40ms">
+          <span class="tip-icon" aria-hidden="true">01</span>
+          <div><h3>Type the example</h3><p>Writing the code yourself helps you notice its parts and get comfortable with the syntax.</p></div>
+        </article>
+        <article class="practice-tip" data-reveal style="--reveal-delay: 100ms">
+          <span class="tip-icon" aria-hidden="true">02</span>
+          <div><h3>Change one thing</h3><p>Predict what a small edit will do, then try it. Experimenting helps connect code to results.</p></div>
+        </article>
+        <article class="practice-tip" data-reveal style="--reveal-delay: 160ms">
+          <span class="tip-icon" aria-hidden="true">03</span>
+          <div><h3>Read errors patiently</h3><p>Check the line mentioned, look for spelling or punctuation issues, and try again.</p></div>
+        </article>
+      </div>
+      <p class="practice-reminder" data-reveal><strong>Remember:</strong> getting an error is a normal part of programming. Each fix teaches you something useful.</p>
+    </section>
+
+    <section class="about-strip" id="about" aria-labelledby="about-title" data-reveal>
+      <div class="about-copy"><div class="kicker">About the project</div><h2 id="about-title">OUR RESEARCH OUTPUT</h2><p>Programming Simulator is a research output created to give aspiring developers a welcoming place to begin learning how to code. It brings introductory learning materials and practice exercises together so learners can explore a concept, try it out, and strengthen their understanding at their own pace.</p><p>The site focuses on core web technologies—HTML, CSS, and JavaScript—as well as SQL. Its exercises offer a way to check understanding through practice, while the beginner-focused explanations and examples help make foundational ideas easier to approach. Our goal is to encourage curiosity, regular practice, and confidence as learners take their first steps in programming.</p></div>
+      <div class="about-team" aria-label="Research group members">
+        <h3>OUR GROUP</h3>
+        <p class="group-leader"><strong>Group Leader:</strong><span><b>Renz Joseph Lucero</b></span></p>
+        <div class="group-members"><strong>Group Members:</strong><ul>
+          <li><b>Andrew Navarro</b></li>
+          <li><b>Carlo Bautista</b></li>
+          <li><b>Gian Paulo Daguismol</b></li>
+          <li><b>John Benedict Mercado</b></li>
+          <li><b>LJ Velasco</b></li>
+          <li><b>Raffy Saliba</b></li>
+        </ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap" data-reveal><span><strong>Programming Simulator</strong> · Learn the basics. Practice as you go.</span><span>Built for curious minds and future developers.</span></footer>
+
+  <dialog class="exercise-dialog" id="learning-dialog" aria-labelledby="learning-dialog-title">
+    <div class="exercise-dialog-head"><button id="learning-dialog-close" class="exercise-dialog-close" type="button" aria-label="Close learning materials">×</button></div>
+    <div class="exercise-dialog-body">
+      <h2 class="exercise-section-title" id="learning-dialog-title">Learning Materials</h2>
+      <div class="exercise-topics-head"><h3>Select a Topic:</h3></div>
+      <div class="exercise-topic-grid" id="learning-topic-grid">
+        <button class="exercise-topic" type="button" data-learning-topic="HTML"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path fill="#e34f26" d="M7 3h34l-3.1 36L24 45 10.1 39z"/><path fill="#fff" d="M15.5 10h18l-.4 4H20l.4 4h12.3l-1.2 13-7.5 2.5-7.2-2.5-.5-5h4l.2 2 3.5 1.2 3.7-1.2.4-5H17l-1.5-13z"/></svg></span><strong>HTML</strong><span>Learning Materials</span></button>
+        <button class="exercise-topic" type="button" data-learning-topic="CSS"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path fill="#1572b6" d="M7 3h34l-3.1 36L24 45 10.1 39z"/><path fill="#fff" d="M15 10h18l-.4 4H19.5l.3 4h12.4L31 31l-7 2.5-7.3-2.5-.4-5h4l.2 2 3.5 1.2 3.6-1.2.4-5H16.5L15 10z"/></svg></span><strong>CSS</strong><span>Learning Materials</span></button>
+        <button class="exercise-topic" type="button" data-learning-topic="JavaScript"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" rx="3" fill="#f7df1e"/><text x="12" y="34" fill="#171918" font-family="Arial,sans-serif" font-size="17" font-weight="700">JS</text></svg></span><strong>JavaScript</strong><span>Learning Materials</span></button>
+        <button class="exercise-topic" type="button" data-learning-topic="SQL"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="17" ry="7" fill="#4479a1"/><path fill="#4479a1" d="M7 10v27c0 3.9 7.6 7 17 7s17-3.1 17-7V10c0 3.9-7.6 7-17 7S7 13.9 7 10z"/><path fill="none" stroke="#fff" stroke-width="2" d="M7 19c0 3.9 7.6 7 17 7s17-3.1 17-7M7 28c0 3.9 7.6 7 17 7s17-3.1 17-7"/></svg></span><strong>SQL</strong><span>Learning Materials</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="exercise-dialog" id="exercise-dialog" aria-labelledby="exercise-dialog-title">
+    <div class="exercise-dialog-head"><button id="exercise-dialog-close" class="exercise-dialog-close" type="button" aria-label="Close exercises">×</button></div>
+    <div class="exercise-dialog-body">
+      <h2 class="exercise-section-title" id="exercise-dialog-title">Exercises</h2>
+      <div class="exercise-topics-head"><h3 id="exercise-topic-title">Select a Topic:</h3></div>
+      <div class="exercise-topic-grid" id="exercise-topic-grid">
+        <button class="exercise-topic" type="button" data-topic="HTML"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path fill="#e34f26" d="M7 3h34l-3.1 36L24 45 10.1 39z"/><path fill="#fff" d="M15.5 10h18l-.4 4H20l.4 4h12.3l-1.2 13-7.5 2.5-7.2-2.5-.5-5h4l.2 2 3.5 1.2 3.7-1.2.4-5H17l-1.5-13z"/></svg></span><strong>HTML</strong><span>Exercises</span></button>
+        <button class="exercise-topic" type="button" data-topic="CSS"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path fill="#1572b6" d="M7 3h34l-3.1 36L24 45 10.1 39z"/><path fill="#fff" d="M15 10h18l-.4 4H19.5l.3 4h12.4L31 31l-7 2.5-7.3-2.5-.4-5h4l.2 2 3.5 1.2 3.6-1.2.4-5H16.5L15 10z"/></svg></span><strong>CSS</strong><span>Exercises</span></button>
+        <button class="exercise-topic" type="button" data-topic="JavaScript"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" rx="3" fill="#f7df1e"/><text x="12" y="34" fill="#171918" font-family="Arial,sans-serif" font-size="17" font-weight="700">JS</text></svg></span><strong>JavaScript</strong><span>Exercises</span></button>
+        <button class="exercise-topic" type="button" data-topic="SQL"><span class="topic-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="17" ry="7" fill="#4479a1"/><path fill="#4479a1" d="M7 10v27c0 3.9 7.6 7 17 7s17-3.1 17-7V10c0 3.9-7.6 7-17 7S7 13.9 7 10z"/><path fill="none" stroke="#fff" stroke-width="2" d="M7 19c0 3.9 7.6 7 17 7s17-3.1 17-7M7 28c0 3.9 7.6 7 17 7s17-3.1 17-7"/></svg></span><strong>SQL</strong><span>Exercises</span></button>
+      </div>
+      <section class="selected-exercise" id="selected-exercise" aria-live="polite"><div class="selected-exercise-head"><h3 id="selected-exercise-title">HTML exercise</h3><span id="selected-exercise-type">Exercise</span></div><p id="selected-exercise-prompt"></p><div class="selected-options" id="selected-options"></div><div class="selected-exercise-foot"><button id="exercise-check" class="exercise-check" type="button">Check answer</button><span class="exercise-result" id="exercise-result">Choose an answer to begin.</span></div></section>
+    </div>
+  </dialog>
+
+  <script>
+    const dialogCloseDelay = 180;
+    const learningPages = {
+      HTML: 'pages/html-learning.html',
+      CSS: 'pages/css-learning.html',
+      JavaScript: 'pages/javascript-learning.html',
+      SQL: 'pages/sql-learning.html'
+    };
+    document.querySelectorAll('[data-open-topic]').forEach(link => link.addEventListener('click', () => {
+      const page = learningPages[link.dataset.openTopic];
+      if (page) window.location.href = page;
+    }));
+    const learningDialog = document.querySelector('#learning-dialog');
+    const learningNavTrigger = document.querySelector('#learning-nav-trigger');
+    const learningTopicCards = [...document.querySelectorAll('#learning-topic-grid .exercise-topic')];
+    function closeAnimatedDialog(dialog) {
+      if (!dialog.open || dialog.classList.contains('is-closing')) return;
+      dialog.classList.add('is-closing');
+      window.setTimeout(() => {
+        dialog.classList.remove('is-closing');
+        if (dialog.open) dialog.close();
+      }, dialogCloseDelay);
+    }
+    function openLearningDialog() {
+      learningDialog.classList.remove('is-closing');
+      learningDialog.showModal();
+      learningNavTrigger.setAttribute('aria-expanded', 'true');
+      document.querySelector('.main-nav').classList.remove('open');
+      mobileMenu.setAttribute('aria-expanded', 'false');
+      document.querySelectorAll('.nav-group').forEach(group => { group.classList.remove('open'); group.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false'); });
+      learningNavTrigger.setAttribute('aria-expanded', 'true');
+      document.querySelector('#learning-dialog-close').focus();
+    }
+    function closeLearningDialog() {
+      closeAnimatedDialog(learningDialog);
+    }
+    learningNavTrigger.addEventListener('click', openLearningDialog);
+    document.querySelector('#hero-learning-link').addEventListener('click', openLearningDialog);
+    document.querySelector('#learning-dialog-close').addEventListener('click', closeLearningDialog);
+    learningDialog.addEventListener('click', event => { if (event.target === learningDialog) closeLearningDialog(); });
+    learningDialog.addEventListener('close', () => learningNavTrigger.setAttribute('aria-expanded', 'false'));
+    learningDialog.addEventListener('cancel', event => { event.preventDefault(); closeLearningDialog(); });
+    learningTopicCards.forEach(card => card.addEventListener('click', () => {
+      const topic = card.dataset.learningTopic;
+      closeLearningDialog();
+      const page = learningPages[topic];
+      if (page) window.location.href = page;
+    }));
+
+    const exerciseDialog = document.querySelector('#exercise-dialog');
+    const exerciseNavTrigger = document.querySelector('#exercises-nav-trigger');
+    const exerciseTopicCards = [...document.querySelectorAll('#exercise-topic-grid .exercise-topic')];
+    const exercisePanel = document.querySelector('#selected-exercise');
+    const exerciseResult = document.querySelector('#exercise-result');
+    const exerciseBank = {
+      HTML: { prompt: 'Which HTML tag creates the largest heading by default?', options: ['<h3>', '<h1>', '<head>'], answer: '<h1>' },
+      CSS: { prompt: 'Which CSS property changes the color of text?', options: ['background-color', 'color', 'font-size'], answer: 'color' },
+      JavaScript: { prompt: 'Which keyword declares a variable that can be reassigned?', options: ['let', 'const', 'function'], answer: 'let' },
+      SQL: { prompt: 'Which SQL command retrieves data from a table?', options: ['SELECT', 'DELETE', 'UPDATE'], answer: 'SELECT' }
+    };
+    let selectedExerciseAnswer = '';
+
+    function openExerciseDialog() {
+      exerciseDialog.classList.remove('is-closing');
+      exerciseDialog.showModal();
+      exerciseNavTrigger.setAttribute('aria-expanded', 'true');
+      document.querySelector('.main-nav').classList.remove('open');
+      mobileMenu.setAttribute('aria-expanded', 'false');
+      document.querySelectorAll('.nav-group').forEach(group => { group.classList.remove('open'); group.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false'); });
+      document.querySelector('#exercise-dialog-close').focus();
+    }
+    function closeExerciseDialog() {
+      closeAnimatedDialog(exerciseDialog);
+    }
+    exerciseNavTrigger.addEventListener('click', openExerciseDialog);
+    document.querySelector('#hero-exercises-link').addEventListener('click', openExerciseDialog);
+    document.querySelector('#exercise-dialog-close').addEventListener('click', closeExerciseDialog);
+    exerciseDialog.addEventListener('click', event => { if (event.target === exerciseDialog) closeExerciseDialog(); });
+    exerciseDialog.addEventListener('close', () => {
+      exerciseNavTrigger.setAttribute('aria-expanded', 'false');
+      if (window.location.hash === '#exercises') history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    });
+    exerciseDialog.addEventListener('cancel', event => { event.preventDefault(); closeExerciseDialog(); });
+    exerciseTopicCards.forEach(card => card.addEventListener('click', () => {
+      const topic = card.dataset.topic;
+      const exercisePages = {
+        HTML: 'pages/html-exercises.html',
+        CSS: 'pages/css-exercises.html',
+        JavaScript: 'pages/javascript-exercises.html',
+        SQL: 'pages/sql-exercises.html'
+      };
+      if (exercisePages[topic]) { window.location.href = exercisePages[topic]; return; }
+      const challenge = exerciseBank[topic];
+      selectedExerciseAnswer = '';
+      exerciseTopicCards.forEach(item => item.classList.toggle('selected', item === card));
+      document.querySelector('#selected-exercise-title').textContent = `${topic} exercise`;
+      document.querySelector('#selected-exercise-type').textContent = 'Exercise';
+      document.querySelector('#selected-exercise-prompt').textContent = challenge.prompt;
+      const options = document.querySelector('#selected-options');
+      options.replaceChildren();
+      challenge.options.forEach(answer => {
+        const choice = document.createElement('button');
+        choice.type = 'button';
+        choice.className = 'selected-option';
+        choice.textContent = answer;
+        choice.addEventListener('click', () => {
+          selectedExerciseAnswer = answer;
+          options.querySelectorAll('.selected-option').forEach(option => option.classList.toggle('selected', option === choice));
+          options.querySelectorAll('.selected-option').forEach(option => option.classList.remove('correct', 'incorrect'));
+          exerciseResult.textContent = 'Answer selected. Check it when ready.';
+        });
+        options.append(choice);
+      });
+      exerciseResult.textContent = 'Choose an answer to begin.';
+      exercisePanel.classList.add('show');
+      exercisePanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }));
+    document.querySelector('#exercise-check').addEventListener('click', () => {
+      const topic = document.querySelector('#selected-exercise-title').textContent.replace(/ exercise$/i, '');
+      const expected = exerciseBank[topic]?.answer;
+      if (!selectedExerciseAnswer) { exerciseResult.textContent = 'Choose an answer first.'; return; }
+      document.querySelectorAll('.selected-option').forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+        if (option.textContent === selectedExerciseAnswer) option.classList.add(selectedExerciseAnswer === expected ? 'correct' : 'incorrect');
+      });
+      exerciseResult.textContent = selectedExerciseAnswer === expected ? 'Correct! Nice work.' : `Not quite — the answer is ${expected}.`;
+    });
+
+    const mobileMenu = document.querySelector('.menu-toggle');
+    document.querySelectorAll('.nav-trigger').forEach(trigger => trigger.addEventListener('click', () => {
+      if (trigger === exerciseNavTrigger || trigger === learningNavTrigger) return;
+      const group = trigger.closest('.nav-group');
+      const open = group.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', String(open));
+      document.querySelectorAll('.nav-group').forEach(other => {
+        if (other !== group) { other.classList.remove('open'); other.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false'); }
+      });
+    }));
+    mobileMenu.addEventListener('click', () => {
+      const nav = document.querySelector('.main-nav');
+      const open = nav.classList.toggle('open');
+      mobileMenu.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('.main-nav a').forEach(link => link.addEventListener('click', () => {
+      document.querySelector('.main-nav').classList.remove('open');
+      document.querySelectorAll('.nav-group').forEach(group => { group.classList.remove('open'); group.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false'); });
+      mobileMenu.setAttribute('aria-expanded', 'false');
+    }));
+    document.querySelectorAll('.main-nav a, .main-nav button').forEach(link => link.addEventListener('click', () => {
+      link.classList.remove('nav-clicked');
+      void link.offsetWidth;
+      link.classList.add('nav-clicked');
+      link.addEventListener('animationend', () => link.classList.remove('nav-clicked'), { once: true });
+    }));
+    if (window.location.hash === '#exercises') openExerciseDialog();
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('motion-ready');
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -20px 0px' });
+      document.querySelectorAll('[data-reveal]').forEach(item => revealObserver.observe(item));
+    }
+  </script>
+</body>
+</html>
