@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Beginner-friendly SQL tutorials and a practical reference for querying and changing table data.">
+  <title>SQL Learning Materials — Programming Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../stylesheets/learning.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html#home" aria-label="Programming Simulator home"><span class="brand-mark">&lt;/&gt;</span><span>Programming Simulator</span></a><nav class="header-actions" aria-label="Page navigation"><a class="back-link" href="../index.html#home">← <span>Back to Home</span></a><a class="primary-link" href="sql-exercises.html">Practice SQL</a></nav></div></header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow">LEARNING MATERIALS / SQL</p><h1 id="page-title">SQL TUTORIALS &amp; DOCUMENTATION</h1><p class="intro-copy">Learn to work with data using SQL. Start by reading rows from a table, then filter, organize, and update information with clear queries.</p><div class="intro-actions"><a class="primary-link" href="#tutorials">Browse Tutorials ↓</a><a class="secondary-link" href="#reference">Open SQL Reference</a></div></section>
+    <section class="tutorials-section" id="tutorials" aria-labelledby="tutorials-title"><div class="section-heading"><div><p class="eyebrow">START WITH THE BASICS</p><h2 id="tutorials-title">SQL TUTORIAL LIBRARY</h2></div><span class="count-label">18 BEGINNER LESSONS</span></div>
+      <div class="tutorial-layout"><aside class="lesson-index" aria-label="SQL tutorial list"><h3>All Tutorials</h3>
+        <a href="#sql-intro"><span>01</span> SQL Introduction</a><a href="#select"><span>02</span> SELECT</a><a href="#distinct"><span>03</span> DISTINCT</a><a href="#where"><span>04</span> WHERE</a><a href="#conditions"><span>05</span> AND, OR, NOT</a><a href="#order"><span>06</span> ORDER BY</a><a href="#insert"><span>07</span> INSERT</a><a href="#null"><span>08</span> NULL Values</a><a href="#update"><span>09</span> UPDATE</a><a href="#delete"><span>10</span> DELETE</a><a href="#limit"><span>11</span> LIMIT and TOP</a><a href="#aggregate"><span>12</span> Aggregate Functions</a><a href="#group"><span>13</span> GROUP BY</a><a href="#joins"><span>14</span> JOINs</a><a href="#create"><span>15</span> CREATE TABLE</a><a href="#types"><span>16</span> Data Types</a><a href="#constraints"><span>17</span> Constraints</a><a href="#safe-queries"><span>18</span> Safe Queries and Next Steps</a>
+      </aside><div class="lesson-list">
+        <article class="lesson" id="sql-intro"><span class="lesson-number">LESSON 01</span><h3>SQL Introduction</h3><p>SQL (Structured Query Language) is used to define, read, and change data in relational databases. Tables organize information into rows and columns.</p><pre><code>-- A query asks the database for information
+SELECT name
+FROM students;</code></pre></article>
+        <article class="lesson" id="select"><span class="lesson-number">LESSON 02</span><h3>SELECT</h3><p><code>SELECT</code> chooses columns and <code>FROM</code> names the table. Use <code>*</code> for all columns while exploring; specify columns in queries you keep.</p><pre><code>SELECT name, grade
+FROM students;</code></pre></article>
+        <article class="lesson" id="distinct"><span class="lesson-number">LESSON 03</span><h3>DISTINCT</h3><p><code>DISTINCT</code> removes duplicate result rows so you can see unique values in a column or column combination.</p><pre><code>SELECT DISTINCT city
+FROM students;</code></pre></article>
+        <article class="lesson" id="where"><span class="lesson-number">LESSON 04</span><h3>WHERE</h3><p><code>WHERE</code> filters rows before they are returned. Comparison operators include <code>=</code>, <code>&lt;&gt;</code>, <code>&gt;</code>, and <code>&lt;</code>.</p><pre><code>SELECT name, grade
+FROM students
+WHERE grade &gt;= 80;</code></pre></article>
+        <article class="lesson" id="conditions"><span class="lesson-number">LESSON 05</span><h3>AND, OR, NOT</h3><p>Combine conditions with <code>AND</code> and <code>OR</code>. Use parentheses when a query mixes them so the intended logic is clear.</p><pre><code>SELECT name
+FROM students
+WHERE city = 'Manila' AND grade &gt;= 80;</code></pre></article>
+        <article class="lesson" id="order"><span class="lesson-number">LESSON 06</span><h3>ORDER BY</h3><p><code>ORDER BY</code> sorts the result. Use <code>ASC</code> for ascending order or <code>DESC</code> for descending order.</p><pre><code>SELECT name, grade
+FROM students
+ORDER BY grade DESC;</code></pre></article>
+        <article class="lesson" id="insert"><span class="lesson-number">LESSON 07</span><h3>INSERT</h3><p><code>INSERT INTO</code> adds a row. List the target columns explicitly so the values are easy to match and maintain.</p><pre><code>INSERT INTO students (name, city, grade)
+VALUES ('Mika', 'Cebu', 91);</code></pre></article>
+        <article class="lesson" id="null"><span class="lesson-number">LESSON 08</span><h3>NULL Values</h3><p><code>NULL</code> means a value is missing or unknown. Check it with <code>IS NULL</code> or <code>IS NOT NULL</code>, not with an equals sign.</p><pre><code>SELECT name
+FROM students
+WHERE email IS NULL;</code></pre></article>
+        <article class="lesson" id="update"><span class="lesson-number">LESSON 09</span><h3>UPDATE</h3><p><code>UPDATE</code> changes existing rows. Always check the <code>WHERE</code> condition carefully; without it, every row in the table can be changed.</p><pre><code>UPDATE students
+SET city = 'Manila'
+WHERE student_id = 12;</code></pre></article>
+        <article class="lesson" id="delete"><span class="lesson-number">LESSON 10</span><h3>DELETE</h3><p><code>DELETE</code> removes rows. Use a precise <code>WHERE</code> condition and inspect matching records before deleting data.</p><pre><code>DELETE FROM students
+WHERE student_id = 12;</code></pre></article>
+        <article class="lesson" id="limit"><span class="lesson-number">LESSON 11</span><h3>LIMIT and TOP</h3><p>Limit the number of returned rows while exploring large tables. Syntax differs between database systems: many use <code>LIMIT</code>, while SQL Server uses <code>TOP</code>.</p><pre><code>SELECT name
+FROM students
+ORDER BY name
+LIMIT 5;</code></pre></article>
+        <article class="lesson" id="aggregate"><span class="lesson-number">LESSON 12</span><h3>Aggregate Functions</h3><p>Aggregate functions calculate one result from many rows. Common functions include <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, and <code>MAX</code>.</p><pre><code>SELECT COUNT(*) AS student_count,
+       AVG(grade) AS average_grade
+FROM students;</code></pre></article>
+        <article class="lesson" id="group"><span class="lesson-number">LESSON 13</span><h3>GROUP BY</h3><p><code>GROUP BY</code> creates groups that aggregate functions can summarize. Use <code>HAVING</code> to filter groups after aggregation.</p><pre><code>SELECT city, COUNT(*) AS students
+FROM students
+GROUP BY city
+HAVING COUNT(*) &gt; 1;</code></pre></article>
+        <article class="lesson" id="joins"><span class="lesson-number">LESSON 14</span><h3>JOINs</h3><p>A join combines related rows from tables. An <code>INNER JOIN</code> returns matching pairs; a <code>LEFT JOIN</code> keeps every row from the left table.</p><pre><code>SELECT students.name, classes.title
+FROM students
+INNER JOIN classes
+  ON students.class_id = classes.id;</code></pre></article>
+        <article class="lesson" id="create"><span class="lesson-number">LESSON 15</span><h3>CREATE TABLE</h3><p><code>CREATE TABLE</code> defines columns and their types. Choose a primary key that uniquely identifies each row.</p><pre><code>CREATE TABLE students (
+  student_id INTEGER PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  grade INTEGER
+);</code></pre></article>
+        <article class="lesson" id="types"><span class="lesson-number">LESSON 16</span><h3>Data Types</h3><p>Data types describe what a column stores. Common families include integers, decimal numbers, text, dates, and true/false values; exact type names vary by database.</p><pre><code>student_id INTEGER
+name VARCHAR(100)
+enrolled_on DATE</code></pre></article>
+        <article class="lesson" id="constraints"><span class="lesson-number">LESSON 17</span><h3>Constraints</h3><p>Constraints protect data quality. Common examples include <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>NOT NULL</code>, <code>UNIQUE</code>, and <code>CHECK</code>.</p><pre><code>email VARCHAR(200) UNIQUE NOT NULL,
+grade INTEGER CHECK (grade BETWEEN 0 AND 100)</code></pre></article>
+        <article class="lesson" id="safe-queries"><span class="lesson-number">LESSON 18</span><h3>Safe Queries and Next Steps</h3><p>Use parameterized queries in applications instead of joining untrusted text into SQL. Learn the SQL dialect used by your database because features and syntax can differ.</p><p class="lesson-links"><a href="https://www.w3schools.com/sql/" target="_blank" rel="noreferrer">W3Schools SQL tutorial ↗</a><a href="https://www.postgresql.org/docs/current/tutorial.html" target="_blank" rel="noreferrer">PostgreSQL tutorial ↗</a></p></article>
+      </div></div>
+    </section>
+    <section class="reference-section" id="reference" aria-labelledby="reference-title"><div class="section-heading"><div><p class="eyebrow">QUICK LOOKUP</p><h2 id="reference-title">SQL DOCUMENTATION</h2></div><a class="text-link" href="https://www.w3schools.com/sql/" target="_blank" rel="noreferrer">Full SQL Tutorial ↗</a></div><p class="reference-copy">Common SQL statements and clauses. Some syntax varies between database systems.</p><div class="reference-table-wrap"><table class="reference-table"><thead><tr><th scope="col">Statement</th><th scope="col">Purpose</th><th scope="col">Example</th></tr></thead><tbody>
+        <tr><th scope="row"><code>SELECT</code></th><td>Read rows and columns</td><td><code>SELECT name FROM students;</code></td></tr><tr><th scope="row"><code>WHERE</code></th><td>Filter rows by a condition</td><td><code>WHERE grade &gt; 80</code></td></tr><tr><th scope="row"><code>ORDER BY</code></th><td>Sort query results</td><td><code>ORDER BY name ASC</code></td></tr><tr><th scope="row"><code>INSERT INTO</code></th><td>Add a new row</td><td><code>INSERT INTO t (x) VALUES (1);</code></td></tr><tr><th scope="row"><code>UPDATE</code></th><td>Change existing rows</td><td><code>UPDATE t SET x = 1 WHERE id = 2;</code></td></tr><tr><th scope="row"><code>DELETE</code></th><td>Remove rows</td><td><code>DELETE FROM t WHERE id = 2;</code></td></tr><tr><th scope="row"><code>GROUP BY</code></th><td>Group rows for summary calculations</td><td><code>GROUP BY city</code></td></tr><tr><th scope="row"><code>JOIN</code></th><td>Combine related tables</td><td><code>JOIN classes ON classes.id = students.class_id</code></td></tr>
+      </tbody></table></div><div class="attributes-box"><h3>SQL concepts to remember</h3><dl><div><dt>Row</dt><dd>One record in a table.</dd></div><div><dt>Column</dt><dd>A named field shared by the table’s rows.</dd></div><div><dt>Primary key</dt><dd>A column or set of columns that uniquely identifies a row.</dd></div><div><dt>Foreign key</dt><dd>A constraint that connects a value to a key in another table.</dd></div></dl></div></section>
+    <section class="next-step"><div><p class="eyebrow">LEARN BY PRACTICING</p><h2>Ready to ask questions of data?</h2><p>Practice writing queries and see how small changes affect the results.</p></div><a class="primary-link" href="sql-exercises.html">Go to SQL Exercises →</a></section>
+  </main>
+  <footer class="wrap site-footer"><span><strong>Programming Simulator</strong> · Learn the basics. Practice as you go.</span></footer>
+</body>
+</html>
