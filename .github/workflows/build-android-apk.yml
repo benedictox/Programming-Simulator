@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -27,20 +26,16 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Prepare web assets
+      - name: Prepare web assets and Capacitor dependencies
         run: |
           mkdir -p www
-          cp index.html www/
-          cp manifest.webmanifest service-worker.js www/
+          cp index.html manifest.webmanifest service-worker.js www/
           cp -R pages stylesheets javascripts icons www/
           cat > package.json <<'EOF'
           {
             "name": "programming-simulator-android",
             "version": "1.0.0",
             "private": true,
-            "scripts": {
-              "build:android": "cap sync android"
-            },
             "dependencies": {
               "@capacitor/android": "^6.2.1",
               "@capacitor/core": "^6.2.1"
@@ -52,9 +47,8 @@ jobs:
           EOF
           npm install
 
-      - name: Configure Capacitor
+      - name: Add Android platform
         run: |
-          npx cap init "Programming Simulator" "com.benedicto.programmingsimulator" --web-dir=www
           npx cap add android
           npx cap sync android
 
