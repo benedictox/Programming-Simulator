@@ -1,0 +1,6 @@
+{
+  "appId": "com.benedicto.programmingsimulator",
+  "appName": "Programming Simulator",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
