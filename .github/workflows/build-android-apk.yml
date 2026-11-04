@@ -1,0 +1,73 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [android-offline-apk]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Prepare web assets
+        run: |
+          mkdir -p www
+          cp index.html www/
+          cp manifest.webmanifest service-worker.js www/
+          cp -R pages stylesheets javascripts icons www/
+          cat > package.json <<'EOF'
+          {
+            "name": "programming-simulator-android",
+            "version": "1.0.0",
+            "private": true,
+            "scripts": {
+              "build:android": "cap sync android"
+            },
+            "dependencies": {
+              "@capacitor/android": "^6.2.1",
+              "@capacitor/core": "^6.2.1"
+            },
+            "devDependencies": {
+              "@capacitor/cli": "^6.2.1"
+            }
+          }
+          EOF
+          npm install
+
+      - name: Configure Capacitor
+        run: |
+          npx cap init "Programming Simulator" "com.benedicto.programmingsimulator" --web-dir=www
+          npx cap add android
+          npx cap sync android
+
+      - name: Build debug APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: programming-simulator-android-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
